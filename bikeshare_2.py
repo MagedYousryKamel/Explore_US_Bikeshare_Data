@@ -8,7 +8,7 @@ CITY_DATA = { 'chicago': 'chicago.csv',
 
 MONTH_DATA = ['all', 'january', 'february', 'march', 'april', 'may', 'june', 'july', 'september', 'october', 'november', 'december']
 
-WEEKDAY_DATA = ['all', 'sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday']
+WEEKDAY_DATA = ['all', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
 
 
 
@@ -80,7 +80,7 @@ def load_data(city, month, day):
         df = df[df['month'] == month]
     
     if day != 'all':
-        df = df[df['weekday'] == day]
+        df = df[df['weekday'] == day.title()]
 
 
     return df
